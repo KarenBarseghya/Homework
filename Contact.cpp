@@ -69,8 +69,11 @@ void interface()
 void collector()
 {
     std::ifstream fin;
+    std::string file_name;
+    std::cout << "Please enter your file name : ";
+    std::cin >> file_name;
     std::string str;
-    fin.open("text.txt");
+    fin.open(file_name);
     Contact data;
     std::getline(fin , str);
     int count = 0;
@@ -319,7 +322,10 @@ void Delete_contact()
 void put_on_txt()
 {
     std::ofstream fin;
-    fin.open("text.txt");
+    std::string File_name;
+    std::cout << "Please enter your file name : ";
+    std::cin >> File_name;
+    fin.open(File_name);
    fin << Data.size() << std::endl;
    for(int i = 0 ; i < Data.size() ; ++i)
    {
